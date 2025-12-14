@@ -1,5 +1,5 @@
 {
-  description = "revolutionary new technology that turns any image into obama";
+  description = "revolutionary new technology that turns any image into charlie kirk";
 
   inputs = {
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
@@ -62,7 +62,7 @@
         { pkgs, systemStr }:
         {
           default = pkgs.rustPlatform.buildRustPackage {
-            pname = "obamify";
+            pname = "kirkify";
             version = "1.1";
 
             src = ./.;
@@ -95,7 +95,7 @@
             );
 
             postFixup = pkgs.lib.optionalString pkgs.stdenv.isLinux ''
-              wrapProgram $out/bin/obamify \
+              wrapProgram $out/bin/kirkify \
                 --set-default WINIT_UNIX_BACKEND wayland \
                 --set-default WGPU_BACKEND vulkan \
                 --set LD_LIBRARY_PATH ${
@@ -117,10 +117,10 @@
             enableParallelBuild = true;
 
             meta = {
-              description = "revolutionary new technology that turns any image into obama";
-              homepage = "htpps://github/Spu7Nix/obamify";
+              description = "revolutionary new technology that turns any image into charlie kirk";
+              homepage = "htpps://github/Spu7Nix/kirkify";
               license = pkgs.lib.licenses.mit;
-              mainProgram = "obamify";
+              mainProgram = "kirkify";
             };
           };
         }
