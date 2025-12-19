@@ -2,6 +2,8 @@
 
 revolutionary new technology that turns any image into charlie kirk
 
+[(try it here)](https://ProgramingPro2.github.io/kirkify/)
+
 ![example](example.gif)
 
 # How to use
